@@ -30,22 +30,26 @@
 
 > 2. Linux에 MySQL 5.1 설치
 
-- MySQL Download 사이트에서 MySQL 다운([설치 링크](https://downloads.mysql.com/archives/community/)
+- MySQL Download 사이트에서 MySQL 다운([설치 링크](https://downloads.mysql.com/archives/community/))
   ![image](https://user-images.githubusercontent.com/81629923/113018076-1c060300-91bb-11eb-968c-23af29a87b55.png)
   - TAR Archive Download 마우스 오른쪽 클릭하여 "Copy Link Location" 선택
 
     ```
     # groupadd mysql
     # useradd -g mysql mysql
-    # wget https://downloads.mysql.com/archives/get/p/23/file/mysql-5.1.73-linux-x86_64-glibc23.tar.gz
+    // TAR가 아닌 다른 형태의 설치 방법을 사용해도 됨
+    # wget https://downloads.mysql.com/archives/get/p/23/file/MySQL-5.1.73-1.glibc23.x86_64.rpm-bundle.tar
     ```
 
 - MySQL 압축 풀기 및 설치
 
   ```
-  # tar xvf mysql-5.1.73-linux-x86_64-glibc23.tar.gz
-  # cd mysql-5.1.73-linux-x86_64-glibc23/
-  # chown -Rf mysql.mysql .
+  # tar -xzvf MySQL-5.1.73-1.glibc23.x86_64.rpm-bundle.tar
+  # yum localinstall -y MySQL-server-5.1.73-1.glibc23.x86_64.rpm 
+  # yum localinstall -y MySQL-client-5.1.73-1.glibc23.x86_64.rpm  
+  # usr/bin/mysqladmin -u root password '...'
+  # /usr/bin/mysql_secure_installation
+  # mysql -u root -p
   ```
 
   
