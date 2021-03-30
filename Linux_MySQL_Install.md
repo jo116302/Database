@@ -42,8 +42,7 @@
     ```
 
 - MySQL 압축 풀기 및 설치
-
-  ```Linux
+  ```
   # tar -xzvf MySQL-5.1.73-1.glibc23.x86_64.rpm-bundle.tar
   # yum localinstall -y MySQL-server-5.1.73-1.glibc23.x86_64.rpm 
   # yum localinstall -y MySQL-client-5.1.73-1.glibc23.x86_64.rpm  
@@ -51,5 +50,9 @@
   # /usr/bin/mysql_secure_installation
   # mysql -u root -p
   ```
-
+  - 설치시 오류 중 한 형태 : CentOS7에 mariaDB가 설치되어 충돌이 발생하기 때문에 mariaDB 삭제 후 설치
+   ```
+   # yum list installed mariadb\*
+   # yum remove -y mariadb
+   ```
   
