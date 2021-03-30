@@ -43,7 +43,7 @@
 
 - MySQL 압축 풀기 및 설치
 
-  ```
+  ```Linux
   # tar -xzvf MySQL-5.1.73-1.glibc23.x86_64.rpm-bundle.tar
   # yum localinstall -y MySQL-server-5.1.73-1.glibc23.x86_64.rpm 
   # yum localinstall -y MySQL-client-5.1.73-1.glibc23.x86_64.rpm  
