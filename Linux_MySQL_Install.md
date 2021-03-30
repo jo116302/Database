@@ -23,8 +23,7 @@
 > 2. Linux에 MySQL 5.1 설치
 
 - MySQL Download 사이트에서 MySQL 다운
-  ![image-20210330225431606](C:\Users\jo105\AppData\Roaming\Typora\typora-user-images\image-20210330225431606.png)
-
+  ![image](https://user-images.githubusercontent.com/81629923/113018076-1c060300-91bb-11eb-968c-23af29a87b55.png)
   - TAR Archive Download 마우스 오른쪽 클릭하여 "Copy Link Location" 선택
 
     ```
