@@ -12,10 +12,17 @@
 - CentOS 7인 경우
 
   ```
+  // X Window 설치
   # sudo yum update
   # sudo yum groupinstall "GNOME Desktop" "Graphical Administration Tools"
   # sudo ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target
   # sudo passwd
+  
+  // Window의 RDP로 접속하기 위한 설치
+  # yum install epel-release -y
+  # yum -y install xrdp tigervnc-server
+  # systemctl enable xrdp.service
+  # firewall-cmd --permanent --zone=public --add-port=3389/tcp
   # sudo reboot
   ```
 
@@ -23,7 +30,7 @@
 
 > 2. Linux에 MySQL 5.1 설치
 
-- MySQL Download 사이트에서 MySQL 다운
+- MySQL Download 사이트에서 MySQL 다운([설치 링크](https://downloads.mysql.com/archives/community/)
   ![image](https://user-images.githubusercontent.com/81629923/113018076-1c060300-91bb-11eb-968c-23af29a87b55.png)
   - TAR Archive Download 마우스 오른쪽 클릭하여 "Copy Link Location" 선택
 
