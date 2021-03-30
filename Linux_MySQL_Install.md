@@ -15,7 +15,8 @@
   # sudo yum update
   # sudo yum groupinstall "GNOME Desktop" "Graphical Administration Tools"
   # sudo ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target
-  # sudo password
+  # sudo passwd
+  # sudo reboot
   ```
 
   
