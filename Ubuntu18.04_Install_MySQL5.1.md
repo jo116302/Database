@@ -52,6 +52,12 @@
      # cp /usr/share/mysql/my-medium.cnf /etc/mysql/my.cnf
      # sed -i 's#.*datadir.*#datadir = /var/lib/mysql#g' /etc/mysql/my.cnf
      # chown mysql:mysql -R /var/lib/mysql
+     
+     # mysql_install_db --user=mysql
+     # mysqld_safe -user=mysql &
      # /usr/bin/mysql_secure_installation
+     
+     # cp /usr/share/mysql/mysql.server /etc/init.d/mysql
+     # chmod +x /etc/init.d/mysql
      # mysql -u root -p
      ```
