@@ -8,6 +8,9 @@
  > 압축 풀기 및 설치
    - 압축 풀기 및 설치
      ```
+     # apt-get update
+     # apt-get install -y build-essential
+     # apt-get install -y libncurses5-dev
      # tar xvf mysql-5.1.73.tar.gz
      # cd mysql-5.1.73
      # ./configure \
