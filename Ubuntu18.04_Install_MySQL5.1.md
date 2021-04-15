@@ -69,8 +69,8 @@
   # status
   # show variables like '%char%';
   ```
-- 언어 타입 변경 `/etc/my.cnf`
-  ```linux
+- 언어 타입 변경 `# vi /etc/my.cnf`
+  ```
   [client] 
   default-character-set = utf8 
 
@@ -86,4 +86,8 @@
 
   [mysql] 
   default-character-set = utf8
+  ```
+- 수정 반영
+  ```
+  # sudo service mysql restart
   ```
