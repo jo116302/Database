@@ -61,3 +61,29 @@
      # chmod +x /etc/init.d/mysql
      # mysql -u root -p
      ```
+
+> 언어 타입 설정
+- 현재 타입 확인
+  ```
+  # mysql -u root -p
+  # status
+  # show variables like '%char%';
+  ```
+- 언어 타입 변경 `/etc/my.cnf`
+  ```linux
+  [client] 
+  default-character-set = utf8 
+
+  [mysqld] 
+  character-set-client-handshake=FALSE 
+  init_connect="SET collation_connection = utf8_general_ci" 
+  init_connect="SET NAMES utf8" 
+  character-set-server = utf8 
+  collation-server = utf8_general_ci 
+
+  [mysqldump] 
+  default-character-set = utf8 
+
+  [mysql] 
+  default-character-set = utf8
+  ```
