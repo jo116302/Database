@@ -1,4 +1,4 @@
-> # MySQL CharacterSet 변경
+> # MySQL CharacterSet 변경 ([참고](https://lazymankook.tistory.com/70))
  
 - 한글로 타입 변경
   - `C:\Program Files\MySQL\MySQL Server 5.1\my.ini` 경로 파일 수정
