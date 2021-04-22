@@ -8,6 +8,8 @@
  > 압축 풀기 및 설치
    - 압축 풀기 및 설치
      ```
+     # adduser mysql
+     # addgroup mysql
      # apt-get update
      # apt-get install -y build-essential
      # apt-get install -y libncurses5-dev
