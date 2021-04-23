@@ -3,7 +3,7 @@
 >> ## UPDATE
 
 - Query문 구조
-  ```
+  ```sql
   UPDATE [tableName] SET [columnName] = [변경할 값] WHERE [조건]
   ```
 
@@ -13,5 +13,5 @@
 - 개행 제거
   - Query문 구조
     ```sql
-    update [tableName] set [fieldName] = replace([fieldName], '\r\n', '');
+    UPDATE [tableName] SET [fieldName] = REPLACE([fieldName], '\r\n', '');
     ```
