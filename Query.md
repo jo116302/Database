@@ -11,7 +11,7 @@
 
 - **UPDATE** 문 사용
 - 개행 제거
-  - Query문 구조
+  - [Query문 구조](https://curryyou.tistory.com/68)
     ```sql
     UPDATE [tableName] SET [fieldName] = REPLACE([fieldName], '\r\n', '');
     ```
