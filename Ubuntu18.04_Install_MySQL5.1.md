@@ -56,8 +56,8 @@
      # chown mysql:mysql -R /var/lib/mysql
      
      # mysql_install_db --user=mysql
-     # /usr/bin/mysqladmin -u root password [password]
      # mysqld_safe -user=mysql &
+     # /usr/bin/mysqladmin -u root password [password]
      # /usr/bin/mysql_secure_installation
      
      # cp /usr/share/mysql/mysql.server /etc/init.d/mysql
