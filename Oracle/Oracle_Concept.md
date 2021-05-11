@@ -15,3 +15,7 @@
 - Default Path : `$ORACLE_HOME/network/admin/tnsnames.ora`
 - 파일 기능 : Oracle server에 접속할 때 필요한 정보들을 설정하는 파일
 - [참고 링크3](https://sarc.io/index.php/oracledatabase/186-2014-06-10-01-33-05)<br />[참고 링크2](https://docs.oracle.com/database/121/NETRF/listener.htm#NETRF400)<br />[참고 링크3](https://positivemh.tistory.com/563)
+
+> # Oracle Client
+
+- Oracle Server에 접속하기 위해서 Oralce에서 지원하는 서버와의 연결 툴
