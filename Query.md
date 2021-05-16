@@ -53,7 +53,7 @@
       | 1. 김재수: 35     |
   - `group_concat()`
     ```sql
-      
+    select group_concat(grade, '. ', name, ': ', score) AS Student_Info from student;
     ```
     - 출력 결과 
       | Student_Info                                                        |
