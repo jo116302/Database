@@ -1,5 +1,6 @@
 공부하면서 실습 및 참고할 수 있는 사이트
 - [참고 링크1](https://sqltest.net/#)
+- [참고 링크2](https://livesql.oracle.com/apex/livesql/file/tutorial_D39T3OXOCOQ3WK9EWZ5JTJA.html)
 
 <hr />
 
