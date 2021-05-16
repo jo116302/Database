@@ -3,16 +3,38 @@
 
 <hr />
 
-> # 기본적인 쿼리 구문
+> # [기본적인 쿼리 구문](https://server-talk.tistory.com/159)
 
->> ## UPDATE
+>> ## DDL
+
+- 데이터베이스를 정의하는 언어, 데이터리를 생성/수정/삭제하는 등의 데이터의 전체의 설정
+
+>> ## DML
+
+- 데이터베이스에 입력된 레코드를 조회/수정/삭제 등의 역할 수행하는 언어
+
+>>> ### SELECT
 
 - Query문 구조
   ```sql
-  UPDATE [tableName] SET [columnName] = [변경할 값] WHERE [조건]
+  SELECT [COLUMN_NAME OR *] FROM [TABLE_NAME] [WHERE 조건]
   ```
 
-> # field value의 수정사항
+>>> ### INSERT
+
+- Query문 구조
+  ```sql
+  INSERT INTO [TABLENAME] ([입력을 원하는 COLUMN]...) VALUES ([해당 COLUMN에 입력할 값]...);
+  ```
+
+>>> ### UPDATE
+
+- Query문 구조
+  ```sql
+  UPDATE [tableName] SET [columnName] = [변경할 값] WHERE [조건];
+  ```
+
+>>>> #### field value의 수정사항
 
 - **UPDATE** 문 사용
 - 개행 제거
@@ -20,6 +42,10 @@
     ```sql
     UPDATE [tableName] SET [fieldName] = REPLACE([fieldName], '\r\n', '');
     ```
+
+>>> ### DCL
+
+- 데이터베이스에 접근 또는 객체에 권한을 주는등의 역할을 하는 언어
 
 > # 테이블이 멀티키 구조 형태일 경우
 
