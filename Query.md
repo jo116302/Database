@@ -140,7 +140,7 @@
 > # Value Check and Input
 
 - 필드에 값의 유무(NULL)를 확인
-- 사용 함수 `NVL`
+- 사용 함수 [`NVL`](https://docs.oracle.com/cd/B19306_01/server.102/b14200/functions105.htm#i91798)
   - NVL([value1], [value2])
   - 첫 파라미터 인자값이 NULL이면, 두번째 인자값으로 대체
 
