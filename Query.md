@@ -140,21 +140,21 @@
 > # Value Check and Input
 
 1) NVL()
-  - 필드에 값의 유무(NULL)를 확인
-  - 사용 함수 [`NVL`](https://docs.oracle.com/cd/B19306_01/server.102/b14200/functions105.htm#i91798)
-    - NVL([value1], [value2])
-    - 첫 파라미터 인자값이 NULL이면, 두번째 인자값으로 대체
+   - 필드에 값의 유무(NULL)를 확인
+   - 사용 함수 [`NVL`](https://docs.oracle.com/cd/B19306_01/server.102/b14200/functions105.htm#i91798)
+     - NVL([value1], [value2])
+     - 첫 파라미터 인자값이 NULL이면, 두번째 인자값으로 대체
 
 2) CASE WHEN
-  - 특정 값인지 확인 (IF 문법)
-  - 사용 함수
-    ```sql
-    CASE WHEN [조건1] THEN [참일 경우 값1]
-         WHEN [조건2] THEN [참일 경우 값2]
-         ...
-         ELSE [조건문에 걸러지지 않은 값]
-    END
-    ```
+   - 특정 값인지 확인 (IF 문법)
+   - 사용 함수
+     ```sql
+     CASE WHEN [조건1] THEN [참일 경우 값1]
+          WHEN [조건2] THEN [참일 경우 값2]
+          ...
+          ELSE [조건문에 걸러지지 않은 값]
+     END
+     ```
 
 >> ## 예제로 확인
 
