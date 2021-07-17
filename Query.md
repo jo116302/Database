@@ -136,3 +136,63 @@
       | 2. 안철수: 100    |
       | 3. 김철수: 80     |
       | 1. 김재수: 35     |
+
+> # Value Check and Input
+
+- 필드에 값의 유무(NULL)를 확인
+- 사용 함수 `NVL`
+  - NVL([value1], [value2])
+  - 첫 파라미터 인자값이 NULL이면, 두번째 인자값으로 대체
+
+>> ## 예제로 확인
+
+- 예제를 위한 테이블과 값 저장
+  ```sql
+  CREATE TABLE sql_test_a ( 
+      ID         VARCHAR2(4000 BYTE), 
+      FIRST_NAME VARCHAR2(200 BYTE), 
+      LAST_NAME  VARCHAR2(200 BYTE) 
+  );
+  
+  INSERT INTO sql_test_a (ID, FIRST_NAME, LAST_NAME) VALUES ('1', 'John', 'Snow'); 
+  INSERT INTO sql_test_a (ID, FIRST_NAME, LAST_NAME) VALUES ('2', 'Mike', 'Tyson'); 
+  INSERT INTO sql_test_a (ID, FIRST_NAME, LAST_NAME) VALUES ('3', 'Bill', 'Keaton'); 
+  INSERT INTO sql_test_a (ID, FIRST_NAME, LAST_NAME) VALUES ('4', 'Greg', 'Mercury'); 
+  INSERT INTO sql_test_a (ID, FIRST_NAME, LAST_NAME) VALUES ('5', 'Steve', 'Jobs'); 
+  INSERT INTO sql_test_a (FIRST_NAME, LAST_NAME) VALUES ('Johhny', 'Depp');
+  INSERT INTO sql_test_a (FIRST_NAME, LAST_NAME) VALUES ('Johhny', 'Depp');
+  ```
+- NVL를 사용하지 전 조회 값
+  ```sql
+  SELECT 
+    NVL(ID, 'NO ID'),
+    FIRST_NAME,
+    LAST_NAME
+  FROM sql_test_a;
+  ```
+  
+  - 결과
+    |ID | FIRST NAME | LAST NAME|
+    |:-:|:-:|:-:|
+    |1	|John|	Snow|
+    |2	|Mike|	Tyson|
+    |3	|Bill|	Keaton|
+    |	|Greg|	Mercury|
+    |	|Steve|	Jobs|
+
+- NVL를 사용 후 조회 값
+  ```sql
+  SELECT 
+      NVL(ID, 'NO ID') AS ID,
+      FIRST_NAME,
+      LAST_NAME
+  FROM sql_test_a;
+  ```
+  - 결과
+    |ID | FIRST NAME | LAST NAME|
+    |:-:|:-:|:-:|
+    |1	|John|	Snow|
+    |2	|Mike|	Tyson|
+    |3	|Bill|	Keaton|
+    |NO ID	|Greg|	Mercury|
+    |NO ID	|Steve|	Jobs|
