@@ -175,67 +175,67 @@
   INSERT INTO sql_test_a (FIRST_NAME, LAST_NAME) VALUES ('Jonly', 'Wang');
   ```
 1) NVL()
-  - NVL를 사용하지 전 조회 값
-    ```sql
-    SELECT 
-      NVL(ID, 'NO_ID'),
-      FIRST_NAME,
-      LAST_NAME
-    FROM sql_test_a;
-    ```
+   - NVL를 사용하지 전 조회 값
+     ```sql
+     SELECT 
+       NVL(ID, 'NO_ID'),
+       FIRST_NAME,
+       LAST_NAME
+     FROM sql_test_a;
+     ```
 
-    - 결과
-      |ID | FIRST_NAME | LAST_NAME|
-      |:-:|:-:|:-:|
-      |1	|John|	Snow|
-      |2	|Mike|	Tyson|
-      |3	|Bill|	Keaton|
-      |4	|Greg|	Mercury|
-      |5	|Steve|	Jobs|
-      ||	Johhny|	Depp|
-      ||	Jonly|	Wang|
+     - 결과
+       |ID | FIRST_NAME | LAST_NAME|
+       |:-:|:-:|:-:|
+       |1	|John|	Snow|
+       |2	|Mike|	Tyson|
+       |3	|Bill|	Keaton|
+       |4	|Greg|	Mercury|
+       |5	|Steve|	Jobs|
+       ||	Johhny|	Depp|
+       ||	Jonly|	Wang|
 
-  - NVL를 사용 후 조회 값
-    ```sql
-    SELECT 
-        NVL(ID, 'NO ID') AS ID,
-        FIRST_NAME,
-        LAST_NAME
-    FROM sql_test_a;
-    ```
-    - 결과
-      |ID | FIRST_NAME | LAST_NAME|
-      |:-:|:-:|:-:|
-      |1	|John|	Snow|
-      |2	|Mike|	Tyson|
-      |3	|Bill|	Keaton|
-      |4|Greg|	Mercury|
-      |5|Steve|	Jobs|
-      |NO_ID|	Johhny|	Depp|
-      |NO_ID|	Jonly|	Wang|
+   - NVL를 사용 후 조회 값
+     ```sql
+     SELECT 
+         NVL(ID, 'NO ID') AS ID,
+         FIRST_NAME,
+         LAST_NAME
+     FROM sql_test_a;
+     ```
+     - 결과
+       |ID | FIRST_NAME | LAST_NAME|
+       |:-:|:-:|:-:|
+       |1	|John|	Snow|
+       |2	|Mike|	Tyson|
+       |3	|Bill|	Keaton|
+       |4|Greg|	Mercury|
+       |5|Steve|	Jobs|
+       |NO_ID|	Johhny|	Depp|
+       |NO_ID|	Jonly|	Wang|
 
 2) CASE WHEN
-  - 조건문을 사용한 조회 쿼리
-    ```sql
-    SELECT 
-      CASE WHEN ID='1' THEN 'ONE'
-           WHEN ID='2' THEN 'TWO'
-           WHEN ID='3' THEN 'THREE'
-           WHEN ID='4' THEN 'FOUR'
-           WHEN ID='5' THEN 'FIVE'
-           ELSE 'EMPTY'
-      END AS ID,
-      FIRST_NAME,
-      LAST_NAME
-    FROM sql_test_a;
-    ```
-    - 결과
-      |ID | FIRST_NAME | LAST_NAME|
-      |:-:|:-:|:-:|
-      |ONE	|John|	Snow|
-      |TWO	|Mike|	Tyson|
-      |THREE	|Bill|	Keaton|
-      |FOUR|Greg|	Mercury|
-      |FIVE|Steve|	Jobs|
-      |EMPTY|	Johhny|	Depp|
-      |EMPTY|	Jonly|	Wang|
+   - 조건문을 사용한 조회 쿼리
+     ```sql
+     SELECT 
+       CASE WHEN ID='1' THEN 'ONE'
+            WHEN ID='2' THEN 'TWO'
+            WHEN ID='3' THEN 'THREE'
+            WHEN ID='4' THEN 'FOUR'
+            WHEN ID='5' THEN 'FIVE'
+            ELSE 'EMPTY'
+       END AS ID,
+       FIRST_NAME,
+       LAST_NAME
+     FROM sql_test_a;
+     ```
+     - 결과
+       |ID | FIRST_NAME | LAST_NAME|
+       |:-:|:-:|:-:|
+       |ONE	|John|	Snow|
+       |TWO	|Mike|	Tyson|
+       |THREE	|Bill|	Keaton|
+       |FOUR|Greg|	Mercury|
+       |FIVE|Steve|	Jobs|
+       |EMPTY|	Johhny|	Depp|
+       |EMPTY|	Jonly|	Wang|
