@@ -40,7 +40,19 @@
     init_connect="SET collation_connection = utf8_general_ci"
     init_connect="SET NAMES utf8"
     character-set-server = utf8
+    
+    [mysql]
+    character-set-server = utf8
     ```
+  - cmd 환경 확인
+    - 확인 방법
+      ```cmd
+      chcp
+      ```
+    - 값이 `494`인 경우 949 수정하면 cmd에 한글이 출력되지만, java나 mysql 쿼리를 사용하기 위해서는 `65001`로 수정
+      ```cmd
+      chcp65001
+      ```
 
 - 만약 언어 타입에 문제가 있다고 출력되는 경우 `C:\Program Files\MySQL\MySQL Server 5.1\share\charsets\index.xml` 확인하기
   - 지원하는 언어 타입이 존재여부 확인할 것
